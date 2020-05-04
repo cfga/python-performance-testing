@@ -26,10 +26,12 @@ This project uses setuptools. To install it in-place:
 This will run a pip3 command to install the library in-place, along with its dependencies.
 
 # Run tests
-To run tests:
+The tests are written using property-based testing library (Hypothesis)[https://hypothesis.readthedocs.io/en/latest/]. To run the tests:
 
 `make test`
 
 # Run benchmarks
+
+Benchmarking is done with (pytest-benchmark)[https://pytest-benchmark.readthedocs.io/en/latest/] library. To run the benchmarks:
 
 `make bench`

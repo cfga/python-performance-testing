@@ -3,7 +3,7 @@ import string
 
 
 def gen_random_string():
-    return "".join(random.choices(string.ascii_letters + string.digits, k=10))
+    return "".join(random.choices(string.ascii_letters + string.digits, k=30))
 
 
 TEST_LIST_10 = [gen_random_string() for _ in range(10)]

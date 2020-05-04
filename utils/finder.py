@@ -23,7 +23,8 @@ class Finder:
         index = {}
         for s in str_list:
             key = self.__calculate_str_hash(s)
-            # to get O(1)
+
+            # O(1)
             current_obj = index.get(key)
             if current_obj:
                 current_obj.append(s)
