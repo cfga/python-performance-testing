@@ -1,6 +1,6 @@
 # Requirements
 
-- Python 3.7
+- Python >=3.7
 - make
 
 # Setting up the environment
