@@ -4,12 +4,14 @@ import logging
 
 
 class Finder:
+    """A simple class that supports fast lookups of anagrams among the provided strings"""
+
     @staticmethod
     def __calculate_str_hash(s):
         return sha256(bytes("".join(sorted(s)), encoding="utf-8")).hexdigest()
 
     def __init__(self, str_list: List[AnyStr]):
-        """Constructs a new object allowing fast lookup of anagrams among the provided strings.
+        """Constructs a new Finder object.
 
             The constructor indexes the input data, calculating the sha256 of the
             sorted list of characters of each list entry.
@@ -18,7 +20,7 @@ class Finder:
                 str_list (List[AnyStr]): list of the string to index
 
             Returns:
-                An object allowing searching for anagrams of a certain string.
+                An object that enables searching for anagrams of a certain string.
             """
         index = {}
         for s in str_list:
