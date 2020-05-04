@@ -19,11 +19,9 @@ Mind the necessity of using a different activation script, see `ls test-venv/bin
 
 # Installing
 
-This project uses setuptools. To install it in-place:
+This project uses setuptools. To install the project in-place along with its dependencies run:
 
 `make install`
-
-This will run a pip3 command to install the library in-place, along with its dependencies.
 
 # Run tests
 The tests are written using property-based testing library [Hypothesis](https://hypothesis.readthedocs.io/en/latest/). To run the tests:
