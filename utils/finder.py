@@ -1,6 +1,6 @@
-from typing import List, AnyStr
 from hashlib import sha256
 import logging
+from typing import List, AnyStr
 
 
 class Finder:
