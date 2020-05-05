@@ -15,7 +15,7 @@ $ python3 -m venv test-venv
 $ source test-venv/bin/activate
 ```
 
-Mind the necessity of using a different activation script, see `ls test-venv/bin`.
+Mind the possible necessity of using a different activation script, see `ls test-venv/bin`.
 
 # Installing
 
