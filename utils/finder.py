@@ -17,7 +17,7 @@ class Finder:
             sorted list of characters of each list entry.
 
             Args:
-                str_list (List[AnyStr]): list of the string to index
+                str_list (List[AnyStr]): list of the strings to index
 
             Returns:
                 An object that enables searching for anagrams of a certain string.
@@ -43,9 +43,9 @@ class Finder:
                 a list of all anagrams of s, indexed by this Finder object. In case if no
                 matching anagrams were found, return empty list.
             """
-        hash = self.__calculate_str_hash(s)
+        key = self.__calculate_str_hash(s)
         try:
-            return self.index[hash]
+            return self.index[key]
         except KeyError:
             logging.info(f"No anagrams found for `{s}`")
             return []
