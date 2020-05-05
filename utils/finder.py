@@ -1,4 +1,5 @@
 from hashlib import sha256
+from itertools import groupby
 import logging
 from typing import List, AnyStr
 
@@ -22,16 +23,8 @@ class Finder:
             Returns:
                 An object that enables searching for anagrams of a certain string.
             """
-        index = {}
-        for s in str_list:
-            key = self.__calculate_str_hash(s)
-            # O(1)
-            current_obj = index.get(key)
-            if current_obj:
-                current_obj.append(s)
-            else:
-                index[key] = [s]
-        self.index = index
+        grouped = groupby(str_list, self.__calculate_str_hash)
+        self.index = {k: list(v) for k, v in grouped}
 
     def find(self, s: AnyStr) -> List[AnyStr]:
         """Looks up all anagrams of s, indexed by this Finder instance.
