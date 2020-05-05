@@ -23,7 +23,7 @@ class Finder:
             Returns:
                 An object that enables searching for anagrams of a certain string.
             """
-        grouped = groupby(str_list, self.__calculate_str_hash)
+        grouped = groupby(sorted(str_list), self.__calculate_str_hash)
         self.index = {k: list(v) for k, v in grouped}
 
     def find(self, s: AnyStr) -> List[AnyStr]:
